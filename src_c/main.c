@@ -11,6 +11,7 @@
 
 extern int cmpInt(const void *a, const void *b);
 extern void day1(FILE *fp);
+extern void day2(FILE *fp);
 
 int main(int argc, const char **argv)
 {
@@ -42,6 +43,9 @@ int main(int argc, const char **argv)
 	{
 	case 1:
 		day1(fp);
+		break;
+	case 2:
+		day2(fp);
 		break;
 	default:
 		DOFATAL("No such day!");
