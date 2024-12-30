@@ -14,7 +14,7 @@ void day1(FILE *fp)
 	rewind(fp);
 
 	size_t list_length = 0;
-	size_t list_capacity = 0xF00;
+	size_t list_capacity = 0x100;
 	int *left_list  = calloc(list_capacity, sizeof(int));
 	int *right_list = calloc(list_capacity, sizeof(int));
 	char line_buffer[256];
@@ -38,7 +38,7 @@ void day1(FILE *fp)
 
 		if (list_length >= list_capacity)
 		{
-			list_capacity += 0xF00;
+			list_capacity += 0x100;
 			left_list  = realloc(left_list,  sizeof(int) * list_capacity);
 			right_list = realloc(right_list, sizeof(int) * list_capacity);
 		}
